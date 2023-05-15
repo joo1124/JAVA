@@ -1,0 +1,30 @@
+import javax.swing.*;
+import java.awt.*;
+
+
+public class NullContainerEx extends JFrame{
+	public NullContainerEx() {
+		setTitle("여러 개의 패널을 가진 프레임");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Container c = getContentPane();
+		c.setLayout(null);
+		
+		JLabel la1 = new JLabel();
+		JLabel la2 = new JLabel();
+		JLabel la3 = new JLabel();
+		
+		la1.setLocation(130, 50);
+		la1.setSize(200,20);
+		c.add(la1);
+		
+		JButton b = new JButton(Integer.toString());
+		setSize(300,200);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new NullContainerEx();
+	}
+
+}
